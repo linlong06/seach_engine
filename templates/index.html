@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Search Engine</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>A search engine starting from Wikipedia</h1>
+            <hr>
+            
+            <form action="/result" method="POST"> {% csrf_token %}
+              <div class="form-group">
+                <input type="text" name="input" class="form-control" placeholder="Enter query word" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+        
+    </body>
+</html>
